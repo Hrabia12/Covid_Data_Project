@@ -12,8 +12,8 @@ connection_string = "postgresql://postgres.iwdgjfmeaxqabnobmsfl:2580@aws-1-eu-no
 class GDPDataCollector:
     def __init__(self):
         self.base_url = "https://api.worldbank.org/v2"
-        self.gdp_indicator = "NY.GDP.MKTP.CD"  # GDP (current US$)
-        self.gdp_per_capita_indicator = "NY.GDP.PCAP.CD"  # GDP per capita
+        self.gdp_indicator = "NY.GDP.MKTP.CD"
+        self.gdp_per_capita_indicator = "NY.GDP.PCAP.CD"
 
     def fetch_gdp_data(self, start_year=2019, end_year=2023):
         gdp_url = f"{self.base_url}/country/all/indicator/{self.gdp_indicator}"
